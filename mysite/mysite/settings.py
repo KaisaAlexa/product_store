@@ -169,6 +169,12 @@ LOGIN_URL = reverse_lazy("myauth:login")
 
 LOGGING = {
     'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'console': {
+            'format': '%(asctime)s %(levelname)s [%(name)s:%(lineno)s] %(module)s %(message)s',
+        }
+    },
     'filters': {
         'require_debug_true': {
             '()': 'django.utils.log.RequireDebugTrue',
@@ -179,6 +185,7 @@ LOGGING = {
             'level': 'DEBUG',
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
+            'formatter': 'console',
         },
     },
     'loggers': {
