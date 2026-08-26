@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+cd /app/mysite
+
+mkdir -p data uploads
+
+python manage.py migrate --noinput
+python manage.py collectstatic --noinput
+
+exec gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
