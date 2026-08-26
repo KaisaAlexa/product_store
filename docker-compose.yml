@@ -9,9 +9,5 @@ services:
     environment:
       DJANGO_DB_NAME: data/db.sqlite3
     volumes:
-      - sqlite_data:/app/mysite/data
-      - media_data:/app/mysite/uploads
-
-volumes:
-  sqlite_data:
-  media_data:
+      - ./mysite/data:/app/mysite/data
+      - ./mysite/uploads:/app/mysite/uploads
