@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.poetry_vendor/
+
+# Django
+*.log
+db.sqlite3
+mysite/data/
+mysite/staticfiles/
+mysite/uploads/
+mysite/var/
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
